@@ -11,6 +11,7 @@ while True:
      image = cv2.resize(image, (h, w))  #resize with height and width
 
      cv2.imshow('Video', image)  #show the video
-     if cv2.waitKey(1)&0xFF== ord('q'):
+     
+     if cv2.waitKey(1)&0xFF== ord('q'):  #escape!
 
          break
