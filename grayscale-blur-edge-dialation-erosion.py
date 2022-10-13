@@ -9,15 +9,15 @@ print(kernel)
 image= 'images/image2.jpg'
 img= cv2.imread(image)
 
-imgGray= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+imgGray= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)  #grayscale
 
-imgBlur= cv2.GaussianBlur(imgGray,(7,7),0)
+imgBlur= cv2.GaussianBlur(imgGray,(7,7),0)  #blur
 
-imgCanny= cv2.Canny(imgBlur,100,200)
+imgCanny= cv2.Canny(imgBlur,100,200)  #edge
 
-imgDilation= cv2.dilate(imgCanny, kernel , iterations= 10)
+imgDilation= cv2.dilate(imgCanny, kernel , iterations= 10)  #dialation
 
-imgEroded= cv2.erode(imgDilation, kernel, iterations= 2)
+imgEroded= cv2.erode(imgDilation, kernel, iterations= 2)  #erosion
 
 cv2.imshow('Output',img)
 
