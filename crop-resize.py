@@ -1,16 +1,21 @@
+#import library
 import cv2
 
-image= 'images/image2.jpg'
+image= 'images/image2.jpg'  #input image
 img= cv2.imread(image)
 print(img.shape)
 
-width, height= 1000, 1000
-Resize= cv2.resize(img,(width, height))
+width, height= 1000, 1000  #measurements 
+
+Resize= cv2.resize(img,(width, height))  #resize
 print(Resize.shape)
 
-Cropped= img[300:540,430:480]
-Cropped_Resize= cv2.resize(Cropped,(img.shape[1],img.shape[0]))
+Cropped= img[300:540,430:480]  #crop
 
+Cropped_Resize= cv2.resize(Cropped,(img.shape[1],img.shape[0]))  #resized crop
+
+
+#outputs
 cv2.imshow('Output', img)
 
 cv2.imshow('Cropped Image: ',Cropped)
