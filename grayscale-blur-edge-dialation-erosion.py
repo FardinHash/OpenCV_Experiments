@@ -21,10 +21,15 @@ imgEroded= cv2.erode(imgDilation, kernel, iterations= 2)  #erosion
 
 cv2.imshow('Output',img)
 
+#outputs
 cv2.imshow('GrayScale Image: ',imgGray)
+
 cv2.imshow('Blur Image: ',imgBlur)
+
 cv2.imshow('Edge image: ',imgCanny)
+
 cv2.imshow('Dialation: ',imgDilation)
+
 cv2.imshow('Eroded Image: ',imgEroded)
 
 cv2.waitKey(0)
