@@ -1,9 +1,10 @@
+#import libraries
 import numpy as np
 from PIL import ImageGrab
 import cv2
 
 
-def scrn_snap(bbox=(50, 50, 690, 530)):
+def scrn_snap(bbox=(50, 50, 690, 530)):  #measurements
     capture= np.array(ImageGrab.grab(bbox))
     capture = cv2.cvtColor(capture, cv2.COLOR_RGB2BGR)
 
