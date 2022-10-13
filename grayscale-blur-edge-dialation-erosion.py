@@ -1,9 +1,11 @@
+#import libraries
 import cv2
 import numpy as np
 
 kernel= np.ones((5,5),np.uint8)
 print(kernel)
 
+#input image
 image= 'images/image2.jpg'
 img= cv2.imread(image)
 
